@@ -17,6 +17,7 @@
 #include "esp_private/periph_ctrl.h"
 #include "esp_log.h"
 #include "esp_check.h"
+#include "rom/gpio.h"
 #include "esp_rom_gpio.h"
 #include "hal/gpio_ll.h"
 #include "hal/usb_hal.h"
@@ -26,6 +27,20 @@
 #include "descriptors_control.h"
 #include "tusb.h"
 #include "tusb_tasks.h"
+
+#if CONFIG_IDF_TARGET_ESP32
+#include "esp32/rom/gpio.h"
+#elif CONFIG_IDF_TARGET_ESP32S2
+#include "esp32s2/rom/gpio.h"
+#elif CONFIG_IDF_TARGET_ESP32S3
+#include "esp32s3/rom/gpio.h"
+#elif CONFIG_IDF_TARGET_ESP32C3
+#include "esp32c3/rom/gpio.h"
+#elif CONFIG_IDF_TARGET_ESP32S3
+#include "esp32s3/rom/gpio.h"                                                                                                                                                                                                                                                                                                   │                                                                                                                                                               │ */
+#elif CONFIG_IDF_TARGET_ESP32H2
+#include "esp32h2/rom/gpio.h"
+#endif
 
 const static char *TAG = "TinyUSB";
 
