@@ -14,7 +14,7 @@
 
 #include "sdkconfig.h"
 #include "driver/gpio.h"
-#include "driver/periph_ctrl.h"
+// #include "driver/periph_ctrl.h"
 #include "esp_log.h"
 #include "esp_check.h"
 #include "esp_rom_gpio.h"
