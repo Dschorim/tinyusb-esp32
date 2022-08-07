@@ -19,6 +19,8 @@ static const char *TAG = "tusb_desc";
 static tusb_desc_device_t s_descriptor;
 static char *s_str_descriptor[USB_STRING_DESCRIPTOR_ARRAY_SIZE];
 static uint8_t *s_config_descriptor = NULL;
+bool tusb_desc_set;
+
 #define MAX_DESC_BUF_SIZE 32
 
 #if CFG_TUD_HID //HID Report Descriptor
