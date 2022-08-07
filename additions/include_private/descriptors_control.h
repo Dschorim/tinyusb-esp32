@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#ifndef DESCRIPTORS_CONTROL_H
+#define DESCRIPTORS_CONTROL_H
+
 #pragma once
 
 #include <string.h>
@@ -60,7 +63,7 @@ enum {
                        CFG_TUD_HID * TUD_HID_DESC_LEN
 };
 
-// bool tusb_desc_set;
+bool tusb_desc_set;
 void tusb_set_descriptor(tusb_desc_device_t *desc, const char **str_desc);
 void tusb_set_config_descriptor(const uint8_t *config_desc);
 tusb_desc_device_t *tusb_get_active_desc(void);
@@ -70,3 +73,5 @@ void tusb_clear_descriptor(void);
 #ifdef __cplusplus
 }
 #endif
+
+#endif // DESCRIPTORS_CONTROL_H
